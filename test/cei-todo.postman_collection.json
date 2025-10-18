@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "c583f884-743c-4975-9d33-44d4d48c6966",
+		"name": "cei-todo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13137144"
+	},
+	"item": [
+		{
+			"name": "get cei's tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/todos/cei",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"todos",
+						"cei"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add cei's task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"cei\", \n    \"task\":\"to do an API\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/todos",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update cei's task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"done\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/todos/1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"todos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete cei's task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"done\": True\n}"
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/todos/7",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"todos",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
