@@ -5,7 +5,7 @@ services:
     image: mysql:8.0 # Or your desired MySQL version
     environment:
       MYSQL_ROOT_PASSWORD: CEiAdmin0 # Replace with a strong password
-      MYSQL_DATABASE: your_database_name # Optional: Create a default database
+      MYSQL_DATABASE: ceidb # Optional: Create a default database
       MYSQL_USER: cei # Optional: Create a default user
       MYSQL_PASSWORD: CEi001 # Optional: Set password for the default user
     volumes:
@@ -20,7 +20,7 @@ services:
       - mysql_db # Ensures 'mysql_db' service starts before 'phpmyadmin'
     environment:
       PMA_HOST: mysql_db # Connects phpMyAdmin to the 'mysql_db' service
-      MYSQL_ROOT_PASSWORD: your_root_password # Use the same root password as MySQL
+      MYSQL_ROOT_PASSWORD: CEiAdmin0 # Use the same root password as MySQL
     ports:
       - "8080:80" # Expose phpMyAdmin on host port 8080
     restart: always
