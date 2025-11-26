@@ -87,28 +87,59 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"done\": True\n}"
+					"raw": ""
 				},
 				"url": {
-					"raw": "{{baseURL}}/api/todos/7",
+					"raw": "{{baseURL}}/api/todos/8",
 					"host": [
 						"{{baseURL}}"
 					],
 					"path": [
 						"api",
 						"todos",
-						"7"
+						"8"
 					]
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
 		}
 	],
 	"variable": [
 		{
 			"key": "baseURL",
-			"value": "",
-			"type": "default"
+			"value": "http://localhost:5001"
 		}
 	]
 }
